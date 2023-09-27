@@ -1,0 +1,25 @@
+.data
+x: .long 15
+.text
+.globl main
+main:
+movl $0,%eax
+movl %eax, x
+movl x,%ebx
+
+mov $1,%eax
+mov $0, %ebx
+int $0x80
+gcc: error: missing filename after ‘-o’
+/usr/bin/ld: /tmp/ccsCIYrY.o: warning: relocation in read-only section `.text'
+/usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+/usr/bin/ld: /tmp/cca7VgBI.o: warning: relocation in read-only section `.text'
+/usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+/usr/bin/ld: /tmp/ccSRBRN5.o: warning: relocation in read-only section `.text'
+/usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+/usr/bin/ld: /tmp/ccv3AWlK.o: warning: relocation in read-only section `.text'
+/usr/bin/ld: warning: creating DT_TEXTREL in a PIE
+file_name: cannot open `file_name' (No such file or directory)
+2.s: assembler source, ASCII text
+Hello, world!
+
